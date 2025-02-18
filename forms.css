@@ -1,3 +1,23 @@
 h1 {
   color: green;
 }
+
+form {
+  width: 500px;
+}
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.message-container {
+  align-items: flex-start;
+}
+
+label {
+  margin-right: 10px;
+}
+legend {
+  margin-left: 20px;
+}

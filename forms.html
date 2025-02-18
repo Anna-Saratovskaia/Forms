@@ -11,7 +11,42 @@
     <link href="forms.css" rel="stylesheet" />
     <title>Forms</title>
   </head>
-  <body>
-    <h1>H</h1>
+  <body>  
+
+    <h1>First form example</h1>
+    
+    <form action="example.com/path" method="post">
+      <fieldset>
+      <legend>Contact</legend>
+      <input type="hidden" name="csrf_token" value="random_token_generated_by_server">
+
+      <p class="form-group">
+        <label for="name" required>Name:</label>
+        <input
+          type="text"
+          name="name"
+          placeholder="Sergei Saratovsky"
+          id="name"
+        />
+      </p>
+      <p class="form-group">
+        <label for="email">E-mail:</label>
+        <input
+          type="email"
+          name="email"
+          placeholder="sergei_saratovsky@hotmail.com"
+          id="email"
+        />
+      </p>
+      <p class="form-group message-container">
+        <label for="message">Message:</label>
+        <textarea rows="30" cols="50" id="message" name="message"></textarea>
+      </p>
+      <p>
+        <button type="submit">Send your message</button>
+      </p>
+    </fieldset>
+    
+    </form>
   </body>
 </html>
