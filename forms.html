@@ -1,52 +1,77 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
   <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0"
-      type="text/css"
-    />
-    <script src="forms.js"></script>
-    <link href="forms.css" rel="stylesheet" />
-    <title>Forms</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Form validation: Odin</title>
+    <link rel="stylesheet" href="forms.css" type="text/css" />
+    <script src="forms.js" defer></script>
   </head>
-  <body>  
 
-    <h1>First form example</h1>
-    
-    <form action="example.com/path" method="post">
-      <fieldset>
-      <legend>Contact</legend>
-      <input type="hidden" name="csrf_token" value="random_token_generated_by_server">
-
-      <p class="form-group">
-        <label for="name" required>Name:</label>
-        <input
-          type="text"
-          name="name"
-          placeholder="Sergei Saratovsky"
-          id="name"
-        />
-      </p>
-      <p class="form-group">
-        <label for="email">E-mail:</label>
-        <input
-          type="email"
-          name="email"
-          placeholder="sergei_saratovsky@hotmail.com"
-          id="email"
-        />
-      </p>
-      <p class="form-group message-container">
-        <label for="message">Message:</label>
-        <textarea rows="30" cols="50" id="message" name="message"></textarea>
-      </p>
-      <p>
-        <button type="submit">Send your message</button>
-      </p>
-    </fieldset>
-    
-    </form>
+  <body>
+    <header class="hero-img">
+      <div class="logo-background">
+        <div class="logo-container">
+          <img src="odin-lined.png" alt="Odin Logo" class="logo" />
+          <p class="logo-text">Odin</p>
+        </div>
+      </div>
+    </header>
+    <main class="main-section">
+      <section class="intro-text">
+        <p>
+          This is not a real online service! You know you need something like
+          this in your life to help you realize your deepest dreams. Sign up
+          <em>now</em> to get started.
+        </p>
+        <p>You <em>know</em> you want to.</p>
+      </section>
+      <section class="form-section">
+        <form action="#" method="post" novalidate>
+          <div class="form-container">
+            <h2>Let's do this!</h2>
+            <div class="form-container-flex">
+              <div class="right-side">
+                <div class="form-row">
+                  <label for="first-name">FIRST NAME</label>
+                  <input type="text" name="first-name" id="first-name" />
+                </div>
+                <div class="form-row">
+                  <label for="email">EMAIL</label>
+                  <input type="email" name="email" id="email" />
+                </div>
+                <div class="form-row">
+                  <label for="password">PASSWORD</label>
+                  <input type="password" name="password" id="password" />
+                </div>
+              </div>
+              <div class="left-side">
+                <div class="form-row">
+                  <label for="last-name">LAST NAME</label>
+                  <input type="text" name="last-name" id="last-name" />
+                </div>
+                <div class="form-row">
+                  <label for="phone-number">PHONE NUMBER</label>
+                  <input type="tel" name="phone-number" id="phone-number" />
+                </div>
+                <div class="form-row">
+                  <label for="confirm-password">CONFIRM PASSWORD</label>
+                  <input
+                    type="password"
+                    name="confirm-password"
+                    id="confirm-password"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <button type="submit">Create Account</button>
+        </form>
+      </section>
+      <div class="footer">
+        <p>Already have an account? <a href="#">Log in</a></p>
+      </div>
+    </main>
   </body>
 </html>

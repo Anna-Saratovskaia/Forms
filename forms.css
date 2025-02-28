@@ -1,23 +1,115 @@
-h1 {
-  color: green;
+* {
+  box-sizing: border-box;
+  margin: 0;
 }
 
-form {
-  width: 500px;
-}
-.form-group {
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
   display: flex;
-  align-items: center;
-  gap: 10px;
+  background-color: #f9fafb;
 }
 
-.message-container {
-  align-items: flex-start;
+@font-face {
+  font-family: "Norse-Bold";
+  src: url("Norse-Bold.otf") format("opentype");
+}
+
+.hero-img {
+  flex: 1;
+  background-image: url(img.avif);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+.logo {
+  height: 5rem;
+}
+
+.logo-container {
+  background-color: rgba(0, 0, 0, 0.404);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25vh;
+  height: 6rem;
+}
+
+.logo-text {
+  font-family: "Norse-Bold";
+  color: white;
+  font-size: 4rem;
+}
+
+.main-section {
+  flex: 2;
+  margin: 20px;
+  font-weight: bold;
+}
+
+.main-section > p:first-of-type {
+  margin: 100px 300px 0 20px;
+}
+
+.form-container-flex {
+  display: flex;
+  gap: 50px;
+}
+
+.form-row {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
 }
 
 label {
-  margin-right: 10px;
+  margin-top: 10px;
 }
-legend {
-  margin-left: 20px;
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
+  margin: 20px -20px;
+}
+
+button {
+  background-color: #596d48;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+a {
+  color: #596d48;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+input {
+  height: 1.5rem;
+  width: 15rem;
+  border-radius: 5px;
+  border: 1px solid #8083c2;
+}
+
+input:focus {
+  border: 1px solid #8083c2;
+  box-shadow: 0 2px 2px 1px #5e5f9f;
+}
+
+#password,
+#confirm-password {
+  border: 1px solid rgba(255, 0, 0, 0.847);
+}
+
+.form-section h2 {
+  background-color: white; /* или тот же цвет, что у .form-container */
+  padding: 20px;
+  margin: 0 -20px; /* Сделает его шире, чтобы совпадал с .form-container */
 }
